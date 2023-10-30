@@ -13,7 +13,7 @@
             height:100px;
             border-style:solid;
             border-width:2px;
-            background-color:pink;
+            background-color:dodgerblue;
             margin-top:20px;
         }
     </style>
@@ -38,7 +38,7 @@
                     let div = document.querySelector("#d2");
                     let params = {
                         targets: div,
-                        rotate: { value: 180, duration: 5000 }
+                        rotate: { value: degree, duration: 5000 }
                     };
                     anime(params);
 
@@ -48,7 +48,7 @@
     </div>
 
     <div style="margin:20px;">
-        <button id="btn1" class="btn btn-success">Translate X</button>
+        <button id="btn1" class="btn btn-success">Transate X</button>
         <div class="sty1" id="d1"></div>
 
         <script>
@@ -56,12 +56,14 @@
             {
                 let x = 0;
                 let btn = document.querySelector("#btn1");
-                btn.addEventListener("click", () => {
+                btn.addEventListener("click", () => 
+                {
                     x = x + 50;
                     let div = document.querySelector("#d1");
-                    let params = {
+                    let params =
+                    {
                         targets: div,
-                        translateX: { value: 200, duration: 3000 }
+                        translateX: { value: x, duration: 3000 }
                     };
                     anime(params);
 
